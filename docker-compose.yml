@@ -1,0 +1,11 @@
+services:
+  standset:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: standset-prototype:latest
+    container_name: standset-prototype
+    restart: unless-stopped
+    # Exposed on localhost only: the host nginx is the single public entry point (443).
+    ports:
+      - "127.0.0.1:${APP_PORT:-9020}:80"
