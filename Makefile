@@ -1,6 +1,6 @@
 # =============================================================================
 #  StandSet prototype — déploiement Docker + nginx + certbot
-#  Domaine : badgemaker.agefop.selys.app  ·  conteneur : 127.0.0.1:9020  ·  public : 443
+#  Domaine : sandset.selys.app  ·  conteneur : 127.0.0.1:9020  ·  public : 443
 #
 #  Premier déploiement (sur le VPS, dans ce dossier) :
 #     make deploy        # build + démarrage du conteneur
@@ -10,7 +10,7 @@
 #     make deploy
 # =============================================================================
 
-DOMAIN        ?= badgemaker.agefop.selys.app
+DOMAIN        ?= sandset.selys.app
 APP_PORT      ?= 9020
 EMAIL         ?= admin@selys.app
 SERVICE       ?= standset
