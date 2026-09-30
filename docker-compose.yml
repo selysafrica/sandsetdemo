@@ -6,6 +6,9 @@ services:
     image: standset-prototype:latest
     container_name: standset-prototype
     restart: unless-stopped
+    # Use Docker's default bridge: no project network is created, so this works even when
+    # the host's address pools are exhausted by other stacks.
+    network_mode: bridge
     # Exposed on localhost only: the host nginx is the single public entry point (443).
     ports:
       - "127.0.0.1:${APP_PORT:-9020}:80"
